@@ -5,3 +5,5 @@
 *.log
 *.aux
 *.out
+
+src/*.pdf
