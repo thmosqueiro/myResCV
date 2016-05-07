@@ -1,37 +1,27 @@
 all: recipe
 
-resume='resume'
+fresume='resume'
+fCV='CV'
 
 recipe:
 	clean
-	xela resume
-	xela resume
-	xela cv
-	xela cv
-	bibtex cv
-	xela cv
-	xela cv
+	resume
+	CV
 	clean
 
 
-xela:
-	xelatex $(resume).tex
-latex:
-	latex $(resume).tex
-pdf:
-	pdflatex $(resume).tex
+resume:
+	xelatex $(fresume)
+	xelatex $(fresume)
 
-
-dvi2ps:
-	dvi2ps latex $(resume).dvi
-ps2pdf:
-	ps2pdf latex $(resume).ps
-bibtex:
-	bibtex $(resume).aux
-
-
-cleanoutput:
-	rm -v -f *~ *.aux *.toc *.log *.out $(f).pdf $(f).ps $(f).dvi
+CV:
+	xelatex $(fCV)
+	xelatex $(fCV)
+	bibtex $(fCV)
+	xelatex $(fCV)
+	bibtex $(fCV)
+	xelatex $(fCV)
+	xelatex $(fCV)
 
 clean:
 	rm -v -f *~ *.aux *.toc *.log *.out

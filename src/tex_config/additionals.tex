@@ -1,0 +1,68 @@
+%
+% Zerando o tamanho da barra
+%
+\setlength{\headwidth}{0cm}
+
+
+%
+% Definindo as pastas onde as figuras estao
+%
+\graphicspath{{images/}, {images/future_works/}, {images/experiments/}, {images/logos/}, {images/our_results/}, {images/explaining/}}
+
+
+
+%
+% Footnote na lateral estah definido aqui
+%
+\renewcommand*{\raggedleftmarginnote}{}
+\renewcommand*{\raggedrightmarginnote}{\flushleft}
+\newcounter{myfootnote}
+\renewcommand{\footnote}[2][0]{\refstepcounter{footnote}{\color{red}\mbox{\textsuperscript{$\thefootnote$}}}{\marginnote{ \RaggedRight\footnotesize\singlespacing {\color{red}\mbox{\textsuperscript{$\thefootnote$}}}#2}[#1\baselineskip]}}
+
+
+
+
+%
+% Redefinindo o titulo
+%
+\makeatletter
+\def\@makechapterhead#1{%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+    	\begin{flushright}
+        {\tikz 
+        	\node [rectangle, minimum size=1.5cm, thick, draw=Black, top color=Black, bottom color=Black] (captit) at (0,0) {\color{white} \ \ \large\bfseries \@chapapp\space \thechapter \ \ };
+        }
+    	\end{flushright}
+    \fi
+    \vspace{-0.2cm}
+    \interlinepenalty\@M
+    \centering
+    \huge \color{blue} \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\def\@makeschapterhead#1{%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \huge \color{Black} \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+
+
+%
+% Primeiras definicoes do fancyheader
+%
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{fancy}
+
+
+%
+% Primeira chamada do tikz
+%
+\usetikzlibrary{arrows,shapes,automata,snakes,backgrounds,trees}
+\tikzstyle{every picture}+=[remember picture]
