@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage[style=numeric,sorting=ydnt,defernumbers=true,backend=bibtex]{biblatex}
+\bibliography{myrefs}
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\Huge Dr. Thiago \textsc{Mosqueiro}}\bigskip\par} % Your name
+
+\section{Contact information}
+
+\begin{tabular}{rl}
+  \textsc{E-mail:} & \href{mailto:tmosqueiro@ucsd.edu}{tmosqueiro@ucsd.edu} \\
+  \textsc{Affiliation:} & BioCircuits Institue, University of California San Diego \\
+  \textsc{Address:} & 9500 Gilman Dr, La Jolla, Ca, USA -- 92037 \\
+  \textsc{Phone:} & +1 858 361 6477\\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{tabular}{r|p{11cm}}
+  \setlength{\itemsep}{5cm}
+
+  \textsc{2015 -- current} & Postdoctoral researcher at \textsc{BioCircuits Institute}, UCSD, USA \emph{}\\
+  & \footnotesize{Supervisor: Dr. Ramon Huerta}
+
+  \vspace{0.2cm}
+  \\
+  \textsc{2015 Jan - March} & Junior specialist at \textsc{Rady School of Management}, UCSD, USA \emph{}\\
+  & \footnotesize{Supervisor: Dr. Ramon Huerta}
+
+  \vspace{0.2cm}
+  \\
+  \textsc{2010 -- 2013} & Teaching assistant at \textsc{Institute of Physics of S\~ao Carlos}, USP, Brazil\\
+  & \footnotesize{Worked with Prof. Francisco Alcaraz, Prof. Leonardo Maia, Prof. Rodrigo Pereira, Prof. Jos\'e Abel Hoyos \& Prof. Luis Nunes}\\
+  & \footnotesize{Disciplines: Statistical Physics, Physics 102 and Computational Physics.}
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabular}{rl}
+  \textsc{August} 2015 & {\bf PhD in \textsc{Physics}}, \textbf{University of S\~ao Paulo}, S\~ao Carlos, Brazil\\
+  & Thesis: ``Information processing in sensory neural networks'' \\
+  & \small Advisor: Prof. Leonardo P \textsc{Maia}
+
+  \vspace{0.2cm}
+  \\
+  \textsc{March} 2015 & {\bf Research intership }, \textbf{University of California San Diego}, La Jolla, USA\\
+  & \small Advisor: Prof. Ramon \textsc{Huerta}
+
+  \vspace{0.2cm}
+  \\
+  \textsc{February} 2011 & {\bf Masters in \textsc{Physics}}, \textbf{University of S\~ao Paulo}, S\~ao Carlos, Brazil\\
+  & Thesis: ``Optical transitions in Zincblende semiconductors heterostructures with two sub-bands'' \\
+  & \small Advisor: Prof. Esmerindo \textsc{Bernardes}
+
+  \vspace{0.2cm}
+  \\
+  \textsc{December} 2008 & {\bf Undergraduate Degree in \textsc{}\textsc{Physics}} \\
+  & \small\emph{Institute of Physics of S\~ao Carlos}, \normalsize\textbf{University of S\~ao Paulo}, S\~ao Carlos, Brazil
+
+\end{tabular}
+
+\section{Grants and awards}
+
+\begin{tabular}{ll}
+  2015 -- 2016  & Microsoft Azure Research grant\\
+  2015 -- present  & CNPq PDE fellowship\\
+  2014 -- 2013   & CAPES PSDE fellowship\\
+  2014   & Selected IOP paper for novelty \& impact\\
+  2013   & Yvone Mascarenhas award for best TA \\
+  2012 -- 2013 & USP PAE fellowship (teaching assistant) \\
+  2009   & Best article award (The LateX Community)
+\end{tabular}
+
+
+\section{My bibliography}
+
+\nocite{*}
+
+\printbibliography[omitnumbers=true, type=article]
+
+\printbibliography[omitnumbers=true, type=inproceedings]
+
+\end{document}
