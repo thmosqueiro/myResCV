@@ -1,9 +1,12 @@
 \documentclass[a4paper,10pt]{article} % Default font size and paper size
 
-\usepackage[style=numeric,sorting=ydnt,defernumbers=true,backend=bibtex]{biblatex}
+\usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,backend=bibtex]{biblatex}
 \bibliography{myrefs}
 
+\renewcommand{\emph}{\textbf}
+
 \usepackage{fontspec} % For loading fonts
+\setmainfont{Cambria}
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
 
@@ -115,8 +118,8 @@
 
 \nocite{*}
 
-\printbibliography[omitnumbers=true, type=article]
+\printbibliography[type=article]
 
-\printbibliography[omitnumbers=true, type=inproceedings]
+\printbibliography[type=inproceedings]
 
 \end{document}

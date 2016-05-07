@@ -16,9 +16,6 @@ resume:
 
 CV:
 	xelatex $(fCV)
-	xelatex $(fCV)
-	bibtex $(fCV)
-	xelatex $(fCV)
 	bibtex $(fCV)
 	xelatex $(fCV)
 	xelatex $(fCV)
