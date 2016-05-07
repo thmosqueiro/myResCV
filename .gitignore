@@ -5,5 +5,8 @@
 *.log
 *.aux
 *.out
+*.blg
+*.bbl
+*.brf
 
 src/*.pdf
