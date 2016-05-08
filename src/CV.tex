@@ -2,7 +2,10 @@
 
 \usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,
               backend=bibtex]{biblatex}
+
+\defbibfilter{f1}{keyword=poster}
 \bibliography{myrefs}
+
 
 \renewcommand{\emph}{\textbf}
 \usepackage{longtable}
@@ -79,23 +82,23 @@
 
 \section{Education}
 
-\begin{tabular}{rl}
+\begin{tabular}{rp{12cm}}
   \textsc{August} 2015 & {\bf PhD in \textsc{Physics}}, \textbf{University of S\~ao Paulo}, S\~ao Carlos, Brazil\\
   & Thesis: ``Information processing in sensory neural networks'' \\
   & \small Advisor: Prof. Leonardo P \textsc{Maia}
 
-  \vspace{0.2cm}
+  \vspace{0.1cm}
   \\
   \textsc{March} 2015 & {\bf Research intership }, \textbf{University of California San Diego}, La Jolla, USA\\
   & \small Advisor: Prof. Ramon \textsc{Huerta}
 
-  \vspace{0.2cm}
+  \vspace{0.1cm}
   \\
   \textsc{February} 2011 & {\bf Masters in \textsc{Physics}}, \textbf{University of S\~ao Paulo}, S\~ao Carlos, Brazil\\
   & Thesis: ``Optical transitions in Zincblende semiconductors heterostructures with two sub-bands'' \\
   & \small Advisor: Prof. Esmerindo \textsc{Bernardes}
 
-  \vspace{0.2cm}
+  \vspace{0.1cm}
   \\
   \textsc{December} 2008 & {\bf Undergraduate Degree in \textsc{}\textsc{Physics}} \\
   & \small\emph{Institute of Physics of S\~ao Carlos}, \normalsize\textbf{University of S\~ao Paulo}, S\~ao Carlos, Brazil
@@ -134,10 +137,10 @@
 {\bf Papers in refereed journals}
 \printbibliography[type=article]
 
-{\bf Conference papers}
+{\bf Conference papers \& Talks}
 \printbibliography[type=inproceedings]
 
-{\bf Posters}
-\printbibliography[type=poster]
+{\bf Posters in conferences}
+\printbibliography[type=proceedings]
 
 \end{document}
