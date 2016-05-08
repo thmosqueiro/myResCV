@@ -1,14 +1,15 @@
 \documentclass[a4paper,10pt]{article} % Default font size and paper size
 
-\usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,backend=bibtex]{biblatex}
+\usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,
+              backend=bibtex]{biblatex}
 \bibliography{myrefs}
 
 \renewcommand{\emph}{\textbf}
-
-\usepackage{fontspec} % For loading fonts
-\setmainfont{Cambria}
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+\usepackage{longtable}
+\usepackage{fontspec}
+\setmainfont[Color=primary, Path = fonts/lato/,
+              BoldItalicFont=Lato-BlaIta,BoldFont=Lato-Bla,
+              ItalicFont=Lato-RegIta]{Lato-Reg}
 
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 
@@ -114,12 +115,29 @@
 \end{tabular}
 
 
+
 \section{My bibliography}
+
+\defbibenvironment{bibliography}
+{\begin{itemize}
+{\setlength{\leftmargin}{\bibhang}%
+\setlength{\itemindent}{-\leftmargin}%
+\setlength{\itemsep}{\bibitemsep}%
+\setlength{\parsep}{\bibparsep}}}
+{\end{itemize}}
+{\item}
+
+\defbibheading{bibliography}[\bibname]{ }
 
 \nocite{*}
 
+{\bf Papers in refereed journals}
 \printbibliography[type=article]
 
+{\bf Conference papers}
 \printbibliography[type=inproceedings]
+
+{\bf Posters}
+
 
 \end{document}
