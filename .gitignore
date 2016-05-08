@@ -10,3 +10,6 @@
 *.brf
 
 src/*.pdf
+
+*.run.xml
+*blx*
