@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article} % Default font size and paper size
+\documentclass[letter,10pt]{article} % Default font size and paper size
 
 \usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,
               backend=bibtex]{biblatex}
@@ -7,8 +7,10 @@
 \bibliography{myrefs}
 
 
+\usepackage{fancyhdr}
+
 \renewcommand{\emph}{\textbf}
-\usepackage{longtable}
+
 \usepackage{fontspec}
 \setmainfont[Color=primary, Path = fonts/lato/,
               BoldItalicFont=Lato-BlaIta,BoldFont=Lato-Bla,
@@ -18,8 +20,7 @@
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 
-\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
-% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+\usepackage[top=1.in, bottom=0.5in, left=1in, right=1.in]{geometry}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
@@ -32,24 +33,28 @@
 
 \begin{document}
 
-\pagestyle{empty} % Removes page numbering
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[RE,LO]{Curriculum Vit\ae}
+\fancyfoot[C]{Dr. Thiago Mosqueiro}
+\fancyfoot[RO,LE] {\thepage}
+\renewcommand{\headrulewidth}{0.pt}
 
-\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\par{\centering{\Huge Dr. Thiago \textsc{Mosqueiro}}\bigskip\par} % Your name
+\par{\centering{\Huge Dr. Thiago \textsc{Mosqueiro}}\bigskip\par}
 
 \section{Contact information}
 
-\begin{tabular}{rl}
-  \textsc{E-mail:} & \href{mailto:tmosqueiro@ucsd.edu}{tmosqueiro@ucsd.edu} \\
-  \textsc{Affiliation:} & BioCircuits Institue, University of California San Diego \\
-  \textsc{Address:} & 9500 Gilman Dr, La Jolla, Ca, USA -- 92037 \\
-  \textsc{Phone:} & +1 858 361 6477\\
-\end{tabular}
+\textsc{Affiliation:} BioCircuits Institue, University of California San Diego
+
+\begin{minipage}{0.4\textwidth}
+  \textsc{E-mail:} \href{mailto:tmosqueiro@ucsd.edu}{tmosqueiro@ucsd.edu} \\
+  \textsc{Home page:} \href{http://thmosqueiro.vandroiy.com}{thmosqueiro.vandroiy.com}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+  \textsc{Address:} 9500 Gilman Dr, La Jolla, Ca, USA -- 92037 \\
+  \textsc{Phone:} +1 858 361 6477
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
