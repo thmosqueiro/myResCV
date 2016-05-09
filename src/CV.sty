@@ -1,0 +1,57 @@
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0.pt}
+\setlength{\footskip}{1cm}
+
+
+\usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,
+              backend=bibtex]{biblatex}
+\bibliography{myrefs}
+
+
+\renewcommand{\emph}{\textbf}
+
+\usepackage{longtable}
+
+\usepackage{fontspec}
+\setmainfont[Color=primary, Path = fonts/lato/,
+              BoldItalicFont=Lato-BlaIta,BoldFont=Lato-Bla,
+              ItalicFont=Lato-RegIta]{Lato-Reg}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[top=1.in, bottom=1.in, left=0.8in, right=0.8in]{geometry}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{darkblue}{rgb}{0.0,0.0,0.5}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[RE,LO]{Curriculum Vit\ae}
+\fancyfoot[C]{Dr. Thiago Mosqueiro}
+\fancyfoot[RO,LE] {\thepage}
+
+
+
+\defbibenvironment{bibliography}
+{\begin{enumerate}
+{\setlength{\leftmargin}{\bibhang}%
+\setlength{\itemindent}{-\leftmargin}%
+\setlength{\itemsep}{\bibitemsep}%
+\setlength{\parsep}{\bibparsep}}}
+{\end{enumerate}}
+{\item}
+
+\defbibheading{bibliography}[\bibname]{ }
