@@ -4,10 +4,10 @@ fresume='resume'
 fCV='CV'
 
 recipe:
-	clean
-	resume
-	CV
-	clean
+	make clean
+	make resume
+	make CV
+	make clean
 
 
 resume:

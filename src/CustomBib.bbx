@@ -11,7 +11,7 @@
 \ProvidesFile{CustomBib.bbx}[.]
 
 % Load the standard style to avoid copy-pasting unnecessary material
-\RequireBibliographyStyle{numeric}
+\RequireBibliographyStyle{numeric-comp}
 
 % Alter settings that carry through from biblatex
 \ExecuteBibliographyOptions{
@@ -76,8 +76,8 @@
     not test {\ifnameundef{author}}
   }
     {%
-      \iffieldequals{fullhash}{\bbx@lasthash}
-        {\bibnamedash\addcomma\space}
+      %\iffieldequals{fullhash}{\bbx@lasthash}
+      %  {\bibnamedash\addcomma\space}
         {\printnames{author}}%
       \usebibmacro{bbx:savehash}%
       \iffieldundef{authortype}
@@ -477,14 +477,6 @@
   \newunit
   \usebibmacro{title}%
   \newunit
-  \printlist{language}%
-  \newunit\newblock
-  \usebibmacro{byauthor}%
-  \newunit\newblock
-  \usebibmacro{bytranslator+others}%
-  \newunit\newblock
-  \printfield{version}%
-  \newunit\newblock
   \usebibmacro{journal+issuetitle}%
   \newunit
   \usebibmacro{pages}%

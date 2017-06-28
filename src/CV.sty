@@ -3,9 +3,21 @@
 \setlength{\footskip}{1cm}
 
 
-\usepackage[style=CustomBib,sorting=ydnt,defernumbers=true,
+\usepackage[style=CustomBib,sorting=none,defernumbers=true,
               backend=bibtex]{biblatex}
 \bibliography{myrefs}
+
+\defbibenvironment{bibliography}
+{\begin{enumerate}
+{\setlength{\leftmargin}{\bibhang}%
+\setlength{\itemindent}{-\leftmargin}%
+\setlength{\itemsep}{\bibitemsep}%
+\setlength{\parsep}{\bibparsep}}}
+{\end{enumerate}}
+{\item}
+
+\defbibheading{bibliography}[\bibname]{ }
+
 
 
 \renewcommand{\emph}{\textbf}
@@ -40,18 +52,5 @@
 \fancyhead{}
 \fancyfoot{}
 \fancyfoot[RE,LO]{Curriculum Vit\ae}
-\fancyfoot[C]{Dr. Thiago Mosqueiro}
+\fancyfoot[C]{Thiago Mosqueiro, PhD}
 \fancyfoot[RO,LE] {\thepage}
-
-
-
-\defbibenvironment{bibliography}
-{\begin{enumerate}
-{\setlength{\leftmargin}{\bibhang}%
-\setlength{\itemindent}{-\leftmargin}%
-\setlength{\itemsep}{\bibitemsep}%
-\setlength{\parsep}{\bibparsep}}}
-{\end{enumerate}}
-{\item}
-
-\defbibheading{bibliography}[\bibname]{ }

@@ -20,9 +20,10 @@
 \thispagestyle{empty}
 
 \definecolor{primary}{HTML}{1b1b1b} % The primary document color for content text
-\definecolor{headings}{HTML}{4A4A4A} % The color of the large sections
+\definecolor{headings}{HTML}{4A4AFF} % The color of the large sections
 \definecolor{subheadings}{HTML}{111111} % The color of subsections and places worked/studied
 \definecolor{date}{HTML}{666666} % The color used for the Last Updated text at the top right
+\definecolor{location}{HTML}{666666} % The color used for the Last Updated text at the top right
 \definecolor{surname}{HTML}{1b1bFF}
 
 %----------------------------------------------------------------------------------------
@@ -57,7 +58,7 @@ Last Update: \today % Last Updated text
 \newcommand{\namesection}[3]{
 \begin{minipage}{0.09\textwidth}
 \vspace{-0.7cm}
-\hspace{-1.0cm}
+\hspace{-0.0cm}
 \includegraphics[height=2.5cm]{TSMosqueiro.jpg}
 \end{minipage}
 \begin{minipage}{0.9\textwidth}
@@ -99,7 +100,7 @@ Last Update: \today % Last Updated text
 \color{subheadings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 \newcommand{\location}[1]{ % Used for specifying a duration and/or location under a subsection
-\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{location}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 %----------------------------------------------------------------------------------------
 %	SECTION TITLE STYLING AND SPACING
